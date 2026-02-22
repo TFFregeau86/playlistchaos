@@ -114,4 +114,12 @@ When you finish, Playlist Chaos will feel more predictable, and you will have ta
 
 ---
 
-The main thing for students to get is that you have to check the right attribute of a data object. For example, classify_song() around line 60 was looking at the title for chill keywords when it really should check the genre. Order and logic in conditionals matter too; search_songs() around line 157 was backwards; it should be if q and q in value. The energy sum around line 124 only looked at “Hype” songs, but it should include all songs, so nothing gets ignored. It’s also smart to code defensively, like returning None in random_choice_or_none() instead of crashing on an empty list. Students usually struggle with picking the right field, understanding Boolean logic, and handling empty data safely, so asking questions like “If you want a song’s style, should you check the title or the genre?” helps guide them.
+The main takeaway for students here is to make sure they check the correct attribute of a data object. For example, in classify_song() around line 60, it was looking at the title for chill keywords when it should have been checking the genre. Order and logic in conditionals are also really important. In search_songs() around line 157, the check if value and value in q was backwards, it should be if q and q in value.
+
+Looking at the energy calculation around line 124, it was only summing songs in the "Hype" list, but it should go through all songs; some types of music get ignored. Also, the lowest energy level should be 1.
+
+Defensive programming is another big concept, like in random_choice_or_none(), it’s better to return None when a list is empty instead of letting the program crash.
+
+Students may struggle with knowing which field to check (title vs genre), understanding Boolean logic and the order of checks, and handling empty or missing data safely. AI can be helpful in spotting patterns, like noticing when sums should be over all songs instead of a subset, or explaining .get() for safely accessing dictionary values. But AI can be misleading if it just gives a code fix without explaining why, because students might copy it without really understanding. For example, returning None is fine, but they also need to understand why it matters to let the caller know the data is missing, rather than just letting the application crash.
+
+A way to guide a student without answering is to ask them what makes sense logically, like, “If you want the style of a song, should you look at the title or the genre?”
