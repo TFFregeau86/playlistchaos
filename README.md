@@ -111,3 +111,7 @@ If you finish early or want an extra challenge, try one of these:
 - Stay curious. The unpredictability is intentional and part of the experience.
 
 When you finish, Playlist Chaos will feel more predictable, and you will have taken your first steps into AI-assisted debugging.
+
+---
+
+The main thing for students to get is that you have to check the right attribute of a data object. For example, classify_song() around line 60 was looking at the title for chill keywords when it really should check the genre. Order and logic in conditionals matter too; search_songs() around line 157 was backwards; it should be if q and q in value. The energy sum around line 124 only looked at “Hype” songs, but it should include all songs, so nothing gets ignored. It’s also smart to code defensively, like returning None in random_choice_or_none() instead of crashing on an empty list. Students usually struggle with picking the right field, understanding Boolean logic, and handling empty data safely, so asking questions like “If you want a song’s style, should you check the title or the genre?” helps guide them.
